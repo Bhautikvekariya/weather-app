@@ -7,7 +7,7 @@ import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 export default function InfoBox({ info }) {
-    const INIT_URL = "https://images.unsplash.com/photo-1680352267694-a7fd4c33d4e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const INIT_URL = "https://images.unsplash.com/photo-1680352267694-a7fd4c33d4e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
     
 const HOT_URL="https://media.istockphoto.com/id/491701259/photo/blue-sky-with-sun.jpg?s=2048x2048&w=is&k=20&c=QzHOHq2uPaPeleoIbhQGf-B9pcTUN1o0MzFFQaXiVWY=";
@@ -22,7 +22,7 @@ const RAIN_URL="https://media.istockphoto.com/id/1476189983/photo/summer-rain-ra
                         image={info.humidity > 80 ? RAIN_URL: info.temp > 15 ? HOT_URL : COLD_URL}
                         title="Weather Background"
                     />
-                    <CardContent>
+                    <CardContent >
                         <Typography gutterBottom variant="h5" component="div">
                             {info.city}{
                                 info.humidity > 80 ? <ThunderstormIcon/>: info.temp > 15 ? <WbSunnyIcon/>: <AcUnitIcon/>
